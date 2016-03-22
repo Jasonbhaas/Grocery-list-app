@@ -5,6 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.delete_all
+Store.delete_all
+List.delete_all
+Itemlists.delete_all
+Items.delete_all
 
 user = User.create(first_name: 'Jason', last_name: 'Haas', email: 'Jasonbhaas@gmail.com', phone: '714-566-4343')
 stores = Store.create([
@@ -18,6 +23,7 @@ mylist = List.create([
 	{name: 'FM Saturday', user_id: user.id, store_id: stores[3].id}
 	])
 
+items
 
 
   create_table "itemlists", force: :cascade do |t|
